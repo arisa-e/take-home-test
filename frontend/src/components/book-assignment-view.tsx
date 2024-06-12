@@ -4,7 +4,7 @@ import BookSearch from './book-search';
 import ReadingList from './reading-list';
 import { Book } from '../types/types';
 
-const BookAssignmentView: React.FC = () => {
+const BookAssignmentView= () => {
   const [readingList, setReadingList] = useState<Book[]>([]);
 
   const addBookToReadingList = (book: Book) => {
@@ -13,7 +13,6 @@ const BookAssignmentView: React.FC = () => {
 
   const removeBookFromReadingList = (bookTitle: string) => {
     setReadingList(readingList.filter(book => book.title !== bookTitle));
-    // 
   };
 
   return (
